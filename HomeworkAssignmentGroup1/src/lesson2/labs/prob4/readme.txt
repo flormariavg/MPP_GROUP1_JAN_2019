@@ -1,3 +1,18 @@
+OUTPUT SOLUTION:
+
+Transcript for Bob: 
+
+ Section Number    Course Name          Grade
+     1               Biology             A
+     3               Mathematics         B
+
+Grades for math section:
+ [B, A-, B]
+Courses that Tim took: [Biology, Mathematics]
+Students who got A's: [Bob]
+
+====================================================
+
 This version imitates the situation
 in which data is read from a database
 where there is a many-many relationship
@@ -7,3 +22,4 @@ Relationships are created when data is loaded
 and new instances of Student/Section cannot be created safely.
 The relationships created at startup
 permit exepcted navigation.
+
