@@ -27,7 +27,7 @@ public class Landlord {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "Name: "+name+" || Total profit: "+getTotalProfit()+"\n"+Arrays.toString(buildings.toArray())+"\n";
+		return "Name: "+name+" || Total profit: "+totalProfit+"\n"+Arrays.toString(buildings.toArray())+"\n";
 	}
 
 }

@@ -39,7 +39,7 @@ public class Building {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "\n Name: "+ name +"|| Profit: "+ getProfit() + "\n  " +Arrays.toString(apartments.toArray())+"\n ";
+		return "\n Name: "+ name +"|| Profit: "+ profit + "\n  " +Arrays.toString(apartments.toArray())+"\n ";
 	}
 
 }
