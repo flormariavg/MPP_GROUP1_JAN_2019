@@ -1,5 +1,5 @@
 OUTPUT SOLUTION:
 
-Name: Lachmiedebie || Grade: A
+Student: Lachmiedebie and Grade: A
 
 
