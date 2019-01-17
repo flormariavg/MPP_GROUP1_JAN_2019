@@ -8,13 +8,13 @@ public class Building {
 	
 	List<Apartment> apartments;
 	private String name;
-	private double maintenceCost;
+	private double maintenanceCost;
 	private double profit;
 	
-	public Building(String name,double maintenceCost) {
+	public Building(String name,double maintenanceCost) {
 		// TODO Auto-generated constructor stub
 		this.name= name;
-		this.maintenceCost=maintenceCost;
+		this.maintenanceCost=maintenanceCost;
 		this.apartments= new ArrayList<>();
 		profit=0;
 	}
@@ -28,7 +28,7 @@ public class Building {
 		for (Apartment apartment : apartments) {
 			profit=profit+apartment.getRent();
 		}
-		profit=profit-maintenceCost;
+		profit=profit-maintenanceCost;
 		return profit;
 	}
 
@@ -39,7 +39,7 @@ public class Building {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "\n Name: "+ name +"|| Profit: "+ getProfit() + "\n  " +Arrays.toString(apartments.toArray())+"\n ";
+		return "\n Name: "+ name +" || Maintenance Cost:"+maintenanceCost+" || Profit: "+ profit + "\n  " +Arrays.toString(apartments.toArray())+"\n ";
 	}
 
 }
