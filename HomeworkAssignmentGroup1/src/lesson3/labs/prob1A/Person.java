@@ -1,5 +1,4 @@
-package lesson3.labs.prob1;
-
+package lesson3.labs.prob1A;
 
 public class Person {
 
@@ -23,3 +22,4 @@ public class Person {
 	}
 
 }
+

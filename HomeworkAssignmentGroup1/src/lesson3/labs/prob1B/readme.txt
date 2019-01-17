@@ -1,5 +1,3 @@
-ANWSER: 
-
 3A. UML classes Circle and Cylinder are given below, pictured in an inheritance relationship. Write
 the code for Circle and Cylinder in Java, making use of the inheritance relationship. Does it make
 sense to use inheritance here? Explain in a separate text file

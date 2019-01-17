@@ -1,0 +1,12 @@
+
+ p1 is an instance of PersonWithJob and p2 is an instance of Person 
+ The equals method is overridden in both the classes. 
+  In the first comparison p1.equals(p2). 
+  ->we compare the name and salary of both the object and only if both fields match then the answer should return true.
+    in this case p1 and p2 have the same name
+    but p1 has a salary of 30.000 and p2 doesn't have a salary,so the salary field doesn't match and we get false.
+    
+ In the second comparison p2.equals(p1)
+  -> here we compare only the name field because p1 has only 1 field to compare.
+  so the if both the objects name are the same then answer returns true.
+  in this case both objects have the name Joe,so answer is true.
