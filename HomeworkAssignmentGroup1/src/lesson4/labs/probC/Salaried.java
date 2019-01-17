@@ -4,15 +4,16 @@ public class Salaried extends Employee{
 
 	private double salary;
 
-	public Salaried(double salary) {
+	public Salaried(double salary, int empId) {
 		// TODO Auto-generated constructor stub
+		super(empId);
 		this.salary = salary;
 	}
 	
 	@Override
 	public double calcGrossPay() {
 		// TODO Auto-generated method stub
-		return 0;
+		return this.salary;
 	}
 
 	public double getSalary() {

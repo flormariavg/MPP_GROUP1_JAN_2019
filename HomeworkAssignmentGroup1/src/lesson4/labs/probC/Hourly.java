@@ -5,7 +5,8 @@ public class Hourly extends Employee{
 	private double hourlyWage;
 	private double hoursPerWeek;
 	
-	Hourly (double hourlyWage, double hoursPerWeek) {
+	Hourly (double hourlyWage, double hoursPerWeek, int empId) {
+		super(empId);
 		this.hourlyWage = hourlyWage;
 		this.hoursPerWeek = hoursPerWeek;
 	}
