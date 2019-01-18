@@ -12,7 +12,7 @@ public class Hourly extends Employee{
 	}
 	
 	@Override
-	public double calcGrossPay() {
+	public double calcGrossPay(int month, int year) {
 		// TODO Auto-generated method stub
 		return hoursPerWeek * hourlyWage * 4;
 	}
@@ -29,5 +29,9 @@ public class Hourly extends Employee{
 		this.hoursPerWeek = hoursPerWeek;
 	}
 	
+	@Override
+	public String toString() {
+		return "Hourly => hourlyWage = " + hourlyWage + " hoursPerWeek= " + hoursPerWeek;
+	}
 	
 }

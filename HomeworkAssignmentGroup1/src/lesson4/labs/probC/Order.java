@@ -1,15 +1,16 @@
 package lesson4.labs.probC;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
+
 
 public class Order {
 
 	
 	private int orderNo;
-	private LocalDateTime orderDate;
+	private LocalDate orderDate;
 	private double orderAmount;
 	
-	Order(int orderNo, LocalDateTime orderDate, int orderAmount) {
+	Order(int orderNo, LocalDate orderDate, int orderAmount) {
 		this.orderAmount = orderAmount;
 		this.orderDate = orderDate;
 		this.orderNo = orderNo;
@@ -21,10 +22,10 @@ public class Order {
 	public void setOrderNo(int orderNo) {
 		this.orderNo = orderNo;
 	}
-	public LocalDateTime getOrderDate() {
+	public LocalDate getOrderDate() {
 		return orderDate;
 	}
-	public void setOrderDate(LocalDateTime orderDate) {
+	public void setOrderDate(LocalDate orderDate) {
 		this.orderDate = orderDate;
 	}
 	public double getOrderAmount() {

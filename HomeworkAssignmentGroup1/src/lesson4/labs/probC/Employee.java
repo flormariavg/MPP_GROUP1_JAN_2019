@@ -1,6 +1,5 @@
 package lesson4.labs.probC;
 
-import java.util.List;
 
 public abstract class Employee {
 	
@@ -11,25 +10,25 @@ public abstract class Employee {
 		this.empId = empId;
 	}
 	
-	public void print() {
+	public void print(int month, int year) {
 		
+		System.out.println("Month/Year Report: " +  month + "/" + year);
+		//System.out.println("Current date" + LocalDateTime.now().getMonthValue() + "/"+ LocalDateTime.now().getYear());
+		
+	}
+	public PayCheck calcCompensation(int month, int year) {
+		
+		double grossPay = this.calcGrossPay(month, year);
+		print(month, year);
+		PayCheck payCheck = new PayCheck(grossPay, 0.23, 0.05, 0.01, 0.03, 0.075);
+		return payCheck;
 	}
 	
-	public PayCheck calcCompensation(List<Employee> employeeList, int month, int year) {
-		if (employeeList == null)
-			return null;
-		
-		for (Employee employee : employeeList) {
-			
-			if (employee instanceof Commissioned) {
-				double total = ((Commissioned) employee).calcGrossPay() +  ((Commissioned) employee).getCommission()*((Commissioned)employee).getTotalAmountOrder(month, year);
-			}
-			
-		}
-		
-		return null;
+	public int getempId() {
+		return empId;
 	}
-	abstract public double calcGrossPay();
+	
+	abstract public double calcGrossPay(int month, int year);
 
 }
 

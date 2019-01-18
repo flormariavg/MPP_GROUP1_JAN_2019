@@ -23,9 +23,11 @@ final public class PayCheck {
 	}
 	public void print() {
 		
+		System.out.println("grossPay = " + grossPay + " netPay = " + getNetPay());
+		
 	}
 	private double getNetPercent() {
-		return  (this.fica + this.state + this.local + this.medicare + this.socialSecurity)/100;
+		return  (this.fica + this.state + this.local + this.medicare + this.socialSecurity);
 	}
 	public double getNetPay() {
 		

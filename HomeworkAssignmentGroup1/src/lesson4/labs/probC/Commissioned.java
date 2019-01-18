@@ -1,7 +1,6 @@
 package lesson4.labs.probC;
 
-import java.time.LocalDateTime;
-import java.time.Month;
+
 import java.util.List;
 
 public class Commissioned extends Employee {
@@ -15,12 +14,13 @@ public class Commissioned extends Employee {
 		// TODO Auto-generated constructor stub
 		super(empId);
 		this.baseSalary = baseSalary;
+		this.commission = commission;
 	}
 	
 	@Override
-	public double calcGrossPay() {
+	public double calcGrossPay(int month, int year) {
 		
-		return getBaseSalary();
+		return getBaseSalary() + getCommission() * getTotalAmountOrder(month, year);
 	}
 
 	public double getCommission() {
@@ -47,7 +47,7 @@ public class Commissioned extends Employee {
 		this.orderList = orderList;
 	}
 	
-	public double getTotalAmountOrder(int month, int year) {
+	private double getTotalAmountOrder(int month, int year) {
 		
 		if (month == 1) {
 			month = month -1;
@@ -68,6 +68,9 @@ public class Commissioned extends Employee {
 		return total;
 
 	}
-	
+	@Override
+	public String toString() {
+		return "Commissioned => commission = " + commission + " baseSalary= " + baseSalary;
+	}
 	
 }
