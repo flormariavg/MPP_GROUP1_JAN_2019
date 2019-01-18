@@ -2,7 +2,7 @@ package lesson4.labs.probC;
 
 final public class PayCheck {
 	
-	private double grossPay = 23;
+	private double grossPay;
 	private double fica;
 	private double state;
 	private double local;
@@ -12,7 +12,6 @@ final public class PayCheck {
 	
 
 	public PayCheck(double grossPay, double fica, double state, double local, double medicare, double socialSecurity) {
-		super();
 		this.grossPay = grossPay;
 		this.fica = fica;
 		this.state = state;

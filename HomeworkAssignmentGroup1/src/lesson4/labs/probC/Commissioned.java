@@ -1,6 +1,7 @@
 package lesson4.labs.probC;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Commissioned extends Employee {
@@ -15,14 +16,26 @@ public class Commissioned extends Employee {
 		super(empId);
 		this.baseSalary = baseSalary;
 		this.commission = commission;
-	}
-	
-	@Override
-	public double calcGrossPay(int month, int year) {
-		
-		return getBaseSalary() + getCommission() * getTotalAmountOrder(month, year);
+		orderList= new ArrayList<>();
 	}
 
+	@Override
+	public double calcGrossPay(int month, int year) {
+		double grossPay=0;
+		month=month-1;
+		if(month==0) {
+			month=12;
+			year=year-1;
+		}
+		for (Order order : orderList) {
+				
+			if(month==order.getOrderDate().getMonthValue() && year==order.getOrderDate().getYear()) 
+				grossPay= grossPay+ order.getOrderAmount();
+			
+		}
+		return baseSalary+(commission*grossPay);
+	}
+	
 	public double getCommission() {
 		return commission;
 	}
@@ -47,27 +60,6 @@ public class Commissioned extends Employee {
 		this.orderList = orderList;
 	}
 	
-	private double getTotalAmountOrder(int month, int year) {
-		
-		if (month == 1) {
-			month = month -1;
-			year = year -1;
-		}
-		
-		double total = 0.0;
-		if (orderList != null) {
-			
-			for (Order order : orderList) {
-				if ( order.getOrderDate().getMonth().getValue() == month && order.getOrderDate().getYear() == year) {
-					total += order.getOrderAmount();
-				}
-				
-			}
-			
-		} 
-		return total;
-
-	}
 	@Override
 	public String toString() {
 		return "Commissioned => commission = " + commission + " baseSalary= " + baseSalary;

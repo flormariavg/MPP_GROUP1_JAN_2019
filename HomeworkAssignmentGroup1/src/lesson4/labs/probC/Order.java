@@ -4,7 +4,6 @@ import java.time.LocalDate;
 
 
 public class Order {
-
 	
 	private int orderNo;
 	private LocalDate orderDate;
@@ -35,7 +34,11 @@ public class Order {
 		this.orderAmount = orderAmount;
 	}
 
-	
+	@Override
+	public String toString() {
+		return "Order [orderNo=" + orderNo + ", orderDate=" + orderDate + ", orderAmount=" + orderAmount + "]";
+	}
+
 	
 	
 }
