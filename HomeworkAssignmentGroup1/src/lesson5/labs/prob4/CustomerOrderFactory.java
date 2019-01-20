@@ -1,7 +1,7 @@
 package lesson5.labs.prob4;
 
 import java.time.LocalDate;
-public class CustomerOrderFactory {
+final public class CustomerOrderFactory {
 
 	private CustomerOrderFactory() {
 		

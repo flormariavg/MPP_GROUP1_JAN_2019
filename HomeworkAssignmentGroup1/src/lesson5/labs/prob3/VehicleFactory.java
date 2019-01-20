@@ -1,6 +1,6 @@
 package lesson5.labs.prob3;
 
-public class VehicleFactory {
+final public class VehicleFactory {
 
 	private VehicleFactory() {
 	}
