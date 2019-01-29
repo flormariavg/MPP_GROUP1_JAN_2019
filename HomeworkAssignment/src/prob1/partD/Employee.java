@@ -40,14 +40,7 @@ public class Employee {
 		Employee emp = (Employee)ob;
 		return emp.name.equals(name) && emp.salary == salary && emp.visited == visited ;
 	}
-	/*
-	 * @Override
-	public boolean equals(Object ob) {
-		if(ob == null) return false;
-		if(!(ob instanceof Employee)) return false;
-		Employee emp = (Employee)ob;
-		return emp.name.equals(name) && emp.salary == salary && emp.visited == visited;
-	}
+
 	@Override
 	public int hashCode() {
 		int result = 17;
@@ -57,11 +50,7 @@ public class Employee {
 		result += 31 * result + salaryHash;
 		result += 31 * result + (visited ? 1 : 0);
 		return result;
-	}*/
-	
-	@Override
-	public int hashCode() {
-		return Objects.hash(name, salary, visited);
 	}
+	
 	
 }
