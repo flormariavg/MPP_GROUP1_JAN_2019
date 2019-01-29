@@ -1,4 +1,4 @@
-package l.esson7.labs.prob4;
+package lesson7.labs.prob4;
 
 import java.util.Arrays;
 import java.util.List;
