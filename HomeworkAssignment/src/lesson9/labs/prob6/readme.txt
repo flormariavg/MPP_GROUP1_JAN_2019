@@ -1,0 +1,4 @@
+OUTPUT SOLUTION:
+
+{A,1,B,3,D,5}
+
