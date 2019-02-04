@@ -26,7 +26,7 @@ public class Main {
 		/*
 		 * OUTPUT SOLUTION:
 		 * 
-		 * 1, 4, 9, 16, 
+		 * Number words: 2
 		 */
 	}
 	public static void main(String[] args) {
@@ -36,7 +36,7 @@ public class Main {
 	public int countWords(List<String> words, char c, char d, int len) {
 		
 		long countWords = words.stream()
-				.filter(x-> x.length()==len && x.indexOf(c)>-1 && x.indexOf(d)==-1)
+				.filter(x-> x.length()==len && x.startsWith(String.valueOf(c)) && !x.startsWith(String.valueOf(d)))
 				.count();
 		return (int) countWords;
 	}
