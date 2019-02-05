@@ -3,7 +3,6 @@ package lesson9.labs.prob9;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
-import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class Dish {
@@ -36,7 +35,6 @@ public class Dish {
 	public static void main(String[] args) {
 		// a. Is there any Vegetarian meal available ( return type boolean)
 		Predicate<Dish> predicate;
-		Function<Dish, String> function;
 		predicate=x -> x.isVegetarian();
 		System.out.println("a. Is there any Vegetarian meal available ( return type boolean)\n");
 		System.out.println(Dish.isThereAny(predicate));
@@ -69,6 +67,35 @@ public class Dish {
 		System.out.println("f. calculateTotalCaloriesMethodReference()in the menu using MethodReferences. (return int)");
 		System.out.println(calculateTotalCalories());
 		System.out.println("********************************************************");
+		
+		/*
+		 * OUTPUT SOLUTION:
+
+			a. Is there any Vegetarian meal available ( return type boolean)
+			
+			true
+			********************************************************
+			b. Is there any healthy menu have calories less than 1000 ( return type boolean)
+			
+			true
+			********************************************************
+			c. Is there any unhealthy menu have calories greater than 1000 ( return type boolean)
+			
+			false
+			********************************************************
+			d. find and return the first item for the type of MEAT( return type Optional<Dish>)
+			
+			Optional[pork]
+			********************************************************
+			e. calculateTotalCalories() in the menu using reduce. (return int)
+			
+			4300
+			********************************************************
+			f. calculateTotalCaloriesMethodReference()in the menu using MethodReferences. (return int)
+			4300
+			********************************************************
+
+		 */
 	}
 	//a,b,c
 	public static boolean isThereAny(Predicate<Dish> predicate) {
